@@ -31,3 +31,9 @@ $ find -type f -mmin 20
 ```
 $ find -type f -user jack
 ```
+
+# Excluding files based on directory prefix
+Let's say we want to find all `.js` files in the current directory but we want to exclude `./node_modules/*`:
+```
+$ find -name "*.js" -not -path "./node_modules/*"
+```
